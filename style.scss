@@ -1,0 +1,71 @@
+$skyHeight: 55%;
+
+*{
+	margin: 0;
+	padding: 0;
+}
+html, body{
+	height: 100%;
+}
+body{
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content: space-around;
+	font-family: 'Poppins',Arial,sans-serif;
+	background: #D3D3D3;
+}
+
+.container{
+	width: 100%;
+	height: 100%;
+	/*box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2), 0 2px 5px rgba(0, 0, 0, 0.3);*/
+	background: linear-gradient(#00050C, #244859);
+	overflow: hidden;
+	position: relative;
+	.moon{
+		width: 20vw;
+		height: 20vw;
+		border-radius: 100%;
+		background: #FFF9CF;
+		box-shadow: 0 0 10px #fff9cf;
+		position: absolute;
+		top: 3%;
+		right: 4%;
+	}
+	.star{
+		position: absolute;
+		height: 2px;
+		width: 2px;
+		border-radius: 100%;
+		background: #fff;
+		opacity: 0;
+		animation: 1s pop linear infinite;
+	}
+	.mountain{
+		width: 100px;
+		height: 100px;
+		background: #41B883;
+		position: absolute;
+		bottom: 0;
+		left: 20px;
+		transform: translate(-50%, 50%) rotate(45deg);
+		border-radius: 2px;
+		box-shadow: 0 0 3px rgba(0, 0, 0, 0.3);
+	}
+}
+@keyframes pop{
+	0%{
+		opacity: 0;
+	}
+	100%{
+		opacity: 1;
+	}
+}
+
+/*@media(max-height: 600px){
+	.container{
+		width: 100%;
+		height: 100%;
+	}
+}*/
